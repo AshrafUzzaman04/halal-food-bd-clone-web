@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halal Food Service</title>
+    <link
+      rel="icon"
+      href="https://halalfoodservicebd.com/wp-content/uploads/2022/01/Halal-Food-Service-main-823x800.png"
+    />
+    <!-- boostrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- boxicon cdn -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+  <body>
+    <!-- ============================= -->
+    <!-- header section started here -->
+    <!-- ============================= -->
+    <header>
+      <!-- top header section-->
+      <section class="top_sec_header d-none d-lg-block">
+        <div class="container">
+          <div class="time_mb">
+            <a
+              href="#"
+              class="tt"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="9:00 AM - 10:00 PM"
+            >
+              <span class="icon"><i class="fa-regular fa-clock"></i></span>
+              <span class="time">9:00 AM - 10:00 PM</span>
+            </a>
+            <a
+              href="#"
+              class="tt"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="01749931891"
+            >
+              <span class="icon"><i class="fa-solid fa-phone"></i></span>
+              <span>01749931891</span></a
+            >
+          </div>
+          <div class="social_icon">
+            <div>
+              <a
+                href="#"
+                class="tt"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-title="Follow on Facebook"
+                ><i class="bx bxl-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="tt"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-title="Follow on Instagram"
+                ><i class="bx bxl-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="tt"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-title="Follow on Twitter"
+                ><i class="bx bxl-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="tt"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                data-bs-title="Call Us"
+                ><i class="bx bxs-phone-call"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== main manubar section ==== -->
+      <nav id="navbar">
+        <div class="container-lg">
+          <!-- mobile manubar toggle  -->
+          <div class="manu_toggle openbtn" onclick="openNav()">
+            <span class="text-dark">
+              <i class="fa-solid fa-bars"></i>
+            </span>
+          </div>
+          <!-- logo -->
+          <div class="logo">
+            <a href="#" class="logo">
+              <img
+                src="https://halalfoodservicebd.com/wp-content/uploads/2022/01/Halal-Food-Service-main-823x800.png"
+                alt=""
+              />
+            </a>
+          </div>
+          <!-- list items -->
+          <div class="list_item" id="mySidepanel">
+            <a
+              href="javascript:void(0)"
+              class="closebtn d-block d-lg-none"
+              onclick="closeNav()"
+              ><i class="fa-solid fa-xmark"></i
+            ></a>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li>
+                <a href="#"
+                  >All Foods <span><i class="bx bx-chevron-down"></i></span
+                ></a>
+                <ul>
+                  <li>
+                    <a href="#">পপুলার</a>
+                  </li>
+                  <li>
+                    <a href="#">ঘি ও তেল</a>
+                  </li>
+                  <li>
+                    <a href="#">প্রিমিয়াম শুঁটকি</a>
+                  </li>
+                  <li>
+                    <a href="#">অর্গানিক শুঁটকি</a>
+                  </li>
+                  <li>
+                    <a href="#">গুঁড়া মশলা</a>
+                  </li>
+                  <li>
+                    <a href="#">প্রিমিয়াম খেজুর</a>
+                  </li>
+                  <li>
+                    <a href="#">প্রিমিয়াম নাটস</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+              <li class="d-block d-lg-none"><a href="#">Login</a></li>
+              <li class="d-block d-lg-none">
+                <a href="#"
+                  ><span class="me-2"><i class="fa-solid fa-envelope"></i></span
+                  >Newsletter</a
+                >
+              </li>
+              <li class="d-block d-lg-none">
+                <div class="social_icon_list">
+                  <div>
+                    <a
+                      href="#"
+                      class="tt"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      data-bs-title="Follow on Facebook"
+                      ><i class="bx bxl-facebook"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="tt"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      data-bs-title="Follow on Instagram"
+                      ><i class="bx bxl-instagram"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="tt"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      data-bs-title="Follow on Twitter"
+                      ><i class="bx bxl-twitter"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="tt"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="bottom"
+                      data-bs-title="Call Us"
+                      ><i class="bx bxs-phone-call"></i
+                    ></a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="search">
+              <form action="">
+                <div class="style_search">
+                  <input type="text" placeholder="Search Here" />
+                  <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- ============================= -->
+          <!-- ====== social media section ====== -->
+          <!-- ============================= -->
+          <section class="social_media">
+            <div class="fav d-none d-lg-block">
+              <a href="#"><ion-icon name="heart"></ion-icon></a>
+            </div>
+            <div class="user d-none d-lg-block">
+              <a href="#"><ion-icon name="person"></ion-icon></a>
+            </div>
+            <div class="cart">
+              <a href="#"
+                ><span class="d-none d-lg-block">৳ 0.00</span
+                ><ion-icon name="cart"></ion-icon
+              ></a>
+            </div>
+          </section>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ============================= -->
+    <!-- ====== hero image section ====== -->
+    <!-- ============================= -->
+    <section class="hero_img">
+      <img
+        src="https://halalfoodservicebd.com/wp-content/uploads/2021/12/174518273_288792369461904_1182148777851774931_n-scaled.jpg"
+        class="img-fluid"
+        alt=""
+      />
+    </section>
+
+    <!-- boostrap link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- box icons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- navbar js -->
+    <script src="./assets/js/index.js"></script>
+    <!-- tooltip js -->
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(".tt");
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+  </body>
+</html>
