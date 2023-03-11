@@ -1,13 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.maateen.me/kalpurush/font.css");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Mukta", sans-serif;
 }
 :root {
   --black: #000;
+  --transparent-black: #000000c0;
   --nav-top: hsla(0, 0%, 100%, 0.8);
   --white: #fff;
   --yellow: #fcb414;
@@ -18,7 +22,6 @@
 }
 body {
   background-color: white;
-  font-family: "Mukta", sans-serif;
 }
 .tooltip-arrow {
   &::before {
@@ -30,7 +33,8 @@ body {
   font-weight: 600;
   background-color: var(--yellow) !important;
 }
-// header
+
+// <!-- ====== header ====== -->
 header {
   // top header section
   > .top_sec_header {
@@ -91,12 +95,11 @@ header {
   > nav {
     background-color: var(--white);
     width: 100%;
-    top: 0;
     position: relative;
     z-index: 10;
-    display: block;
+    // display: block;
     box-shadow: 1px 1px 10px var(--header-shadow);
-    transition: background-color 0.3s, opacity 0.3s;
+    transition: all 0.3s ease-in-out;
     behavior: "smooth";
     > .container-lg {
       display: flex;
@@ -117,6 +120,7 @@ header {
             padding: 6px 0;
             max-height: 85px;
             width: auto;
+            transition: all 0.3s ease-in-out;
           }
         }
       }
@@ -302,8 +306,17 @@ header {
   //   media queries for navigation
   @media screen and (max-width: 992px) {
     > nav {
+      > .logo {
+        > a {
+          > img {
+            max-height: 70px;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
       > .container-lg {
         > .manu_toggle {
+          cursor: pointer;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -347,10 +360,13 @@ header {
             padding: 0;
             flex-direction: column;
             display: flex;
+            max-width: 260px;
+            min-width: 260px;
             justify-content: flex-start;
             align-items: flex-start;
             > li {
               margin: 0;
+              max-width: 260px;
               min-width: 260px;
               padding: 10px 20px;
               border-top: 1px solid var(--gray);
@@ -358,6 +374,15 @@ header {
               > a {
                 color: var(--dark-gray);
                 font-weight: 500;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                > span {
+                  font-size: 30px;
+                }
+                > p {
+                  padding-right: 6px;
+                }
               }
               &:hover {
                 background-color: #ebebeb;
@@ -385,6 +410,37 @@ header {
                   }
                 }
               }
+              > ul {
+                padding: 20px 50px;
+                position: relative;
+                width: fit-content;
+                background-color: transparent;
+                border: none;
+                box-shadow: none;
+                transition: all 0.3s ease-in-out;
+                display: none;
+                opacity: 1;
+                visibility: visible;
+                > li {
+                  border-bottom: none;
+                  padding: 4px 0;
+                  > a {
+                    margin: 0 10px;
+                    text-decoration: none;
+                    color: var(--dark-gray);
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                      color: var(--yellow);
+                    }
+                  }
+                }
+                > :nth-last-child(1) {
+                  border-bottom: none;
+                }
+                &::after {
+                  display: none;
+                }
+              }
             }
           }
           // search input
@@ -396,7 +452,8 @@ header {
     }
   }
 }
-// hero image section
+
+// <!-- ====== hero image section ====== -->
 .hero_img {
   width: 100%;
   height: max-content;
@@ -404,5 +461,108 @@ header {
     min-width: 100%;
     max-height: 650px;
     object-fit: cover;
+  }
+}
+
+// <!-- ====== popular product section ====== -->
+.product {
+  > .container-lg {
+    > .pro_title {
+      margin: 50px 0px;
+      > h2 {
+        align-items: center;
+        display: flex;
+        // flex-flow: row wrap;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        > b {
+          background-color: currentColor;
+          display: block;
+          flex: 1;
+          height: 2px;
+          opacity: 0.1;
+        }
+        > span {
+          margin: 0 15px;
+          font-weight: bold;
+          font-family: "Kalpurush", sans-serif;
+        }
+      }
+    }
+    > .grid_pro {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 16px;
+      > .pro {
+        > .img_pro {
+          position: relative;
+          overflow: hidden;
+          > a {
+            display: block;
+            min-width: max-content;
+            min-height: max-content;
+            > img {
+              width: 100%;
+            }
+          }
+          > .wish_list {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          > .quick_view {
+            position: absolute;
+            left: 0;
+            bottom: -60px;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+            > a {
+              display: block;
+              text-decoration: none;
+              color: var(--white);
+              padding: 16px 0;
+              width: 100%;
+              text-align: center;
+              background-color: var(--transparent-black);
+            }
+          }
+          &:hover {
+            > .quick_view {
+              bottom: 0px;
+            }
+          }
+        }
+        > .article_section {
+          > article {
+            font-family: "Kalpurush", sans-serif;
+
+            > :nth-child(1) {
+              color: var(--dark-gray);
+              opacity: 0.8;
+              font-size: 15px;
+            }
+            > :nth-child(2) {
+              > a {
+                text-decoration: none;
+                color: var(--black);
+                font-size: 15px;
+                font-weight: 500;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                  color: var(--yellow);
+                }
+              }
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 950px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (max-width: 500px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 }
