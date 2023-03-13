@@ -19,6 +19,8 @@
   --gray: #ddd;
   --dark-gray: #858585;
   --search-box: #f7f7f7;
+  --red: #d30000;
+  --bg-gray: #f6f6f6;
 }
 body {
   background-color: white;
@@ -32,6 +34,31 @@ body {
   color: var(--black);
   font-weight: 600;
   background-color: var(--yellow) !important;
+}
+@mixin pro_title {
+  > .pro_title {
+    margin-bottom: 50px;
+    > h2 {
+      align-items: center;
+      display: flex;
+      // flex-flow: row wrap;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      > b {
+        background-color: currentColor;
+        display: block;
+        flex: 1;
+        height: 2px;
+        opacity: 0.1;
+      }
+      > span {
+        margin: 0 15px;
+        font-weight: bold;
+        font-family: "Kalpurush", sans-serif;
+      }
+    }
+  }
 }
 
 // <!-- ====== header ====== -->
@@ -97,7 +124,7 @@ header {
     width: 100%;
     position: relative;
     z-index: 10;
-    // display: block;
+    display: block;
     box-shadow: 1px 1px 10px var(--header-shadow);
     transition: all 0.3s ease-in-out;
     behavior: "smooth";
@@ -466,30 +493,9 @@ header {
 
 // <!-- ====== popular product section ====== -->
 .product {
+  margin: 50px 0;
   > .container-lg {
-    > .pro_title {
-      margin: 50px 0px;
-      > h2 {
-        align-items: center;
-        display: flex;
-        // flex-flow: row wrap;
-        justify-content: space-between;
-        position: relative;
-        width: 100%;
-        > b {
-          background-color: currentColor;
-          display: block;
-          flex: 1;
-          height: 2px;
-          opacity: 0.1;
-        }
-        > span {
-          margin: 0 15px;
-          font-weight: bold;
-          font-family: "Kalpurush", sans-serif;
-        }
-      }
-    }
+    @include pro_title();
     > .grid_pro {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -500,16 +506,33 @@ header {
           overflow: hidden;
           > a {
             display: block;
-            min-width: max-content;
-            min-height: max-content;
             > img {
               width: 100%;
             }
           }
           > .wish_list {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 2%;
+            right: 2%;
+
+            > a {
+              border-radius: 50%;
+              padding: 7px;
+              border: 2px solid var(--gray);
+              text-decoration: none;
+              display: flex;
+              color: var(--gray);
+              justify-content: center;
+              align-items: center;
+              transition: all 0.3s ease-in-out;
+              opacity: 0;
+              visibility: hidden;
+              &:hover {
+                color: var(--white);
+                background-color: var(--red);
+                border: 2px solid var(--red);
+              }
+            }
           }
           > .quick_view {
             position: absolute;
@@ -531,6 +554,12 @@ header {
             > .quick_view {
               bottom: 0px;
             }
+            > .wish_list {
+              > a {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
           }
         }
         > .article_section {
@@ -546,7 +575,7 @@ header {
               > a {
                 text-decoration: none;
                 color: var(--black);
-                font-size: 15px;
+                font-size: 14px;
                 font-weight: 500;
                 transition: all 0.2s ease-in-out;
                 &:hover {
@@ -562,6 +591,57 @@ header {
       }
       @media screen and (max-width: 500px) {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+// <!-- ====== top category section ====== -->
+.top_category {
+  padding: 50px 0;
+  background: var(--bg-gray);
+  > .container-lg {
+    @include pro_title();
+    > .pro_title {
+      margin-bottom: 20px !important;
+    }
+    > .grid_category {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px 0;
+      justify-content: space-around;
+      margin: auto !important;
+      > .category {
+        > a {
+          display: block;
+          > img {
+            display: inline-block;
+            height: auto;
+            max-width: 120px;
+            vertical-align: middle;
+          }
+        }
+        > strong {
+          margin-top: 14px;
+          display: block;
+          width: 100%;
+          text-align: center;
+          > a {
+            text-decoration: none;
+            text-align: center;
+            color: var(--black);
+            font-family: "Kalpurush", sans-serif;
+            font-size: 22px;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        &:hover {
+          > strong {
+            > a {
+              color: var(--yellow);
+            }
+          }
+        }
       }
     }
   }
