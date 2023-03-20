@@ -31,6 +31,19 @@
   </head>
   <body>
     <!-- ============================= -->
+    <!-- ============ preloader ============ -->
+    <!-- ============================= -->
+    <div id="preloader">
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+      </div>
+    </div>
+    <!-- ============================= -->
     <!-- header section started here -->
     <!-- ============================= -->
     <header>
@@ -125,10 +138,10 @@
               onclick="closeNav()"
               ><i class="fa-solid fa-xmark"></i
             ></a>
-            <ul>
+            <ul id="ul">
               <li><a href="#">Home</a></li>
-              <li class="dropdown">
-                <a href="#"
+              <li>
+                <a class="dropdown" href="javascript:void(0)"
                   >All Foods <span><i class="bx bx-chevron-down"></i></span
                 ></a>
                 <ul class="dropdown-child">
@@ -157,8 +170,8 @@
               </li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
-              <li class="dropdown">
-                <a href="#"
+              <li>
+                <a class="dropdown" href="#"
                   >Blog <span><i class="bx bx-chevron-down"></i></span
                 ></a>
                 <ul class="dropdown-child">
@@ -251,9 +264,9 @@
       </nav>
     </header>
 
-    <!-- ============================= -->
+    <!-- ================================= -->
     <!-- ====== hero image section ====== -->
-    <!-- ============================= -->
+    <!-- ================================= -->
     <section class="hero_img">
       <img
         src="https://halalfoodservicebd.com/wp-content/uploads/2021/12/174518273_288792369461904_1182148777851774931_n-scaled.jpg"
@@ -262,9 +275,9 @@
       />
     </section>
 
-    <!-- ============================= -->
+    <!-- ===================================== -->
     <!-- ====== popular product section ====== -->
-    <!-- ============================= -->
+    <!-- ===================================== -->
     <section class="product popular_product">
       <div class="container-lg">
         <div class="pro_title">
@@ -306,9 +319,9 @@
       </div>
     </section>
 
-    <!-- ============================= -->
+    <!-- =================================== -->
     <!-- ====== top category section ====== -->
-    <!-- ============================= -->
+    <!-- =================================== -->
     <section class="top_category">
       <div class="container-lg">
         <!-- section title -->
@@ -397,6 +410,98 @@
       </div>
     </section>
 
+    <!-- ======================================= -->
+    <!-- ===== info about product section ======= -->
+    <!-- ======================================= -->
+    <section class="info_pro">
+      <div class="container-lg">
+        <!-- section title -->
+        <div class="pro_title">
+          <h2><b></b><span>পণ্য সম্পর্কে জানুন</span><b></b></h2>
+        </div>
+        <!-- grid video content -->
+        <div class="grid_video">
+          <!-- video 1 -->
+          <div class="video">
+            <iframe
+              class="img-fluid w-100 h-100"
+              src="https://www.youtube.com/embed/56Rdkrvfx0Q"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================= -->
+    <!-- ===== footer section ======= -->
+    <!-- ======================================= -->
+    <footer class="text-center text-lg-start text-white">
+      <section>
+        <div class="container-lg text-start">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">About</h6>
+              <p>
+                Halal food service foods that Muslims are allowed to eat or
+                drink under Islamic Law. We are trying to provide you 100% halal
+                food.
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Company</h6>
+              <p>
+                <a href="#">About</a>
+              </p>
+              <p>
+                <a href="#">CEO Message</a>
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Information</h6>
+              <p>
+                <a href="#">Wishlist</a>
+              </p>
+              <p>
+                <a href="#">Privacy Policy</a>
+              </p>
+              <p>
+                <a href="#">Refund & Returns</a>
+              </p>
+              <p>
+                <a href="#">Terms & Conditions</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Like us on Facebook</h6>
+              <div
+                class="fb-page"
+                data-href="https://www.facebook.com/webcoderashraf"
+                data-width="250"
+                data-hide-cover="false"
+                data-show-facepile="false"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Copyright -->
+      <div class="text-center copyright">
+        2023 © Halal Food Service | Developed By
+        <a class="text-reset fw-bold" href="https://github.com/ashrafuzzaman04"
+          >Ashraf Uzzaman</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
     <!-- jquery cdn -->
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -428,6 +533,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5"></script>
     <!-- box icons -->
     <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
     <!-- navbar js -->
@@ -438,6 +544,25 @@
       const tooltipList = [...tooltipTriggerList].map(
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
+    </script>
+    <!-- preloader js -->
+    <script>
+      // var loader = document.getElementById("preloader");
+
+      // window.addEventListener("load", () => {
+      //   loader.style.opacity = 0;
+      //   loader.style.visibility = "hidden";
+      // });
+
+      $(window).on("load", function () {
+        setTimeout(removeLoader, 1500); //wait for page load PLUS two seconds.
+      });
+      function removeLoader() {
+        $("#preloader").fadeOut(500, function () {
+          // fadeOut complete. Remove the loading div
+          $("#preloader").remove(); //makes page more lightweight
+        });
+      }
     </script>
   </body>
 </html>

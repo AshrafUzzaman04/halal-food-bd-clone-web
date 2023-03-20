@@ -29,12 +29,14 @@ function openNav() {
   document.getElementById("mySidepanel").style.width = "260px";
   document.getElementById("mySidepanel").style.opacity = "1";
   document.getElementById("mySidepanel").style.visibility = "visible";
+  document.getElementById("ul").style.display = "block";
 }
 
 function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
   document.getElementById("mySidepanel").style.opacity = "0";
   document.getElementById("mySidepanel").style.visibility = "hidden";
+  document.getElementById("ul").style.display = "none";
 }
 
 // =============================
@@ -42,10 +44,10 @@ function closeNav() {
 // =============================
 
 $(".dropdown").click(function () {
-  var x = $(this).children(".dropdown-child").css("display");
+  var x = $(this).parent("li").children(".dropdown-child").css("display");
   if (x == "none") {
-    $(this).children(".dropdown-child").css("display", "block");
+    $(this).parent("li").children(".dropdown-child").css("display", "block");
   } else {
-    $(this).children(".dropdown-child").css("display", "none");
+    $(this).parent("li").children(".dropdown-child").css("display", "none");
   }
 });
