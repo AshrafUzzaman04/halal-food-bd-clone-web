@@ -9,6 +9,7 @@
       rel="icon"
       href="https://halalfoodservicebd.com/wp-content/uploads/2022/01/Halal-Food-Service-main-823x800.png"
     />
+
     <!-- boostrap cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -16,16 +17,22 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+
     <!-- boxicon cdn -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
     <!-- font awesome cdn -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
+
+    <!-- click to  zoom image css -->
+    <link rel="stylesheet" href="./assets/css/jquery.pan.css" />
+
     <!-- custom css link -->
     <link rel="stylesheet" href="./assets/css/style.min.css" />
   </head>
@@ -287,18 +294,52 @@
           <!-- product 1 -->
           <div class="pro">
             <div class="img_pro">
-              <a href="#" class="">
+              <a
+                data-big="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg"
+                href="#"
+                class="z-image"
+              >
                 <img
                   class="img-fluid"
-                  src="https://halalfoodservicebd.com/wp-content/uploads/2023/02/8tal-misri-300x300.jpg"
+                  src="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg"
                   alt=""
                 />
               </a>
               <div class="wish_list">
                 <a href="#"><i class="fa-solid fa-heart"></i></a>
               </div>
-              <div class="quick_view">
-                <a href="#"><strong>Quick View</strong></a>
+              <div
+                class="quick_view"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <!-- Button trigger Quick View modal -->
+                <a href="javascript:void(0)"><strong>Quick View</strong></a>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Modal title
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">hi</div>
+                </div>
               </div>
             </div>
             <div class="article_section">
@@ -508,6 +549,10 @@
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
+
+    <!-- click to  zoom image jquery link -->
+    <script src="./assets/js/jquery.pan.js"></script>
+
     <!-- boostrap link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -524,6 +569,7 @@
       integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
       crossorigin="anonymous"
     ></script>
+
     <!-- ionicons -->
     <script
       type="module"
@@ -533,11 +579,16 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- facebook page iframe js api link -->
     <script src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.5"></script>
+
     <!-- box icons -->
     <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+
     <!-- navbar js -->
     <script src="./assets/js/navbar.js"></script>
+
     <!-- tooltip js -->
     <script>
       const tooltipTriggerList = document.querySelectorAll(".tt");
@@ -545,7 +596,8 @@
         (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
       );
     </script>
-    <!-- preloader js -->
+
+    <!-- preloader js/jquery -->
     <script>
       // var loader = document.getElementById("preloader");
 
@@ -563,6 +615,15 @@
           $("#preloader").remove(); //makes page more lightweight
         });
       }
+    </script>
+
+    <!-- click to iamge zoom jquery -->
+    <script>
+      $(document).ready(function () {
+        // $(".z-image").magnificPopup({ type: "image" });
+
+        $(".z-image").pan();
+      });
     </script>
   </body>
 </html>
