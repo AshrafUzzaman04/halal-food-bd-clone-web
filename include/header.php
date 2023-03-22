@@ -17,6 +17,9 @@
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <!-- click to  zoom image css -->
     <link rel="stylesheet" href="./assets/css/jquery.pan.css?<?php time() ?>" />
 
