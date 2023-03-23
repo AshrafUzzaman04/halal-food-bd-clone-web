@@ -62,6 +62,7 @@ body {
   font-weight: 600;
   background-color: var(--yellow) !important;
 }
+// title styles here
 @mixin pro_title {
   > .pro_title {
     margin-bottom: 50px;
@@ -83,6 +84,95 @@ body {
         margin: 0 15px;
         font-weight: bold;
         font-family: "Kalpurush", sans-serif;
+      }
+    }
+  }
+}
+// product styles here
+@mixin pro {
+  > .pro {
+    > .img_pro {
+      position: relative;
+      overflow: hidden;
+      > a {
+        display: block;
+        > img {
+          width: 100%;
+        }
+      }
+      > .wish_list {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+
+        > a {
+          border-radius: 50%;
+          padding: 7px;
+          border: 2px solid var(--gray);
+          text-decoration: none;
+          display: flex;
+          color: var(--gray);
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+          visibility: hidden;
+          &:hover {
+            color: var(--white);
+            background-color: var(--red);
+            border: 2px solid var(--red);
+          }
+        }
+      }
+      > .quick_view {
+        position: absolute;
+        left: 0;
+        bottom: -60px;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        > a {
+          display: block;
+          text-decoration: none;
+          color: var(--white);
+          padding: 16px 0;
+          width: 100%;
+          text-align: center;
+          background-color: var(--transparent-black);
+        }
+      }
+      &:hover {
+        > .quick_view {
+          bottom: 0px;
+        }
+        > .wish_list {
+          > a {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    > .article_section {
+      > article {
+        font-family: "Kalpurush", sans-serif;
+
+        > :nth-child(1) {
+          color: var(--dark-gray);
+          opacity: 0.8;
+          font-size: 15px;
+        }
+        > :nth-child(2) {
+          > a {
+            text-decoration: none;
+            color: var(--black);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              color: var(--yellow);
+            }
+          }
+        }
       }
     }
   }
@@ -623,92 +713,10 @@ header {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 16px;
-      > .pro {
-        > .img_pro {
-          position: relative;
-          overflow: hidden;
-          > a {
-            display: block;
-            > img {
-              width: 100%;
-            }
-          }
-          > .wish_list {
-            position: absolute;
-            top: 2%;
-            right: 2%;
 
-            > a {
-              border-radius: 50%;
-              padding: 7px;
-              border: 2px solid var(--gray);
-              text-decoration: none;
-              display: flex;
-              color: var(--gray);
-              justify-content: center;
-              align-items: center;
-              transition: all 0.3s ease-in-out;
-              opacity: 0;
-              visibility: hidden;
-              &:hover {
-                color: var(--white);
-                background-color: var(--red);
-                border: 2px solid var(--red);
-              }
-            }
-          }
-          > .quick_view {
-            position: absolute;
-            left: 0;
-            bottom: -60px;
-            width: 100%;
-            transition: all 0.3s ease-in-out;
-            > a {
-              display: block;
-              text-decoration: none;
-              color: var(--white);
-              padding: 16px 0;
-              width: 100%;
-              text-align: center;
-              background-color: var(--transparent-black);
-            }
-          }
-          &:hover {
-            > .quick_view {
-              bottom: 0px;
-            }
-            > .wish_list {
-              > a {
-                opacity: 1;
-                visibility: visible;
-              }
-            }
-          }
-        }
-        > .article_section {
-          > article {
-            font-family: "Kalpurush", sans-serif;
+      // include the product styles here
+      @include pro();
 
-            > :nth-child(1) {
-              color: var(--dark-gray);
-              opacity: 0.8;
-              font-size: 15px;
-            }
-            > :nth-child(2) {
-              > a {
-                text-decoration: none;
-                color: var(--black);
-                font-size: 14px;
-                font-weight: 500;
-                transition: all 0.2s ease-in-out;
-                &:hover {
-                  color: var(--yellow);
-                }
-              }
-            }
-          }
-        }
-      }
       @media screen and (max-width: 950px) {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -842,23 +850,37 @@ footer {
   }
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
+/*----------------------------------------------------------------*/
+/*----------------------product.php page styles-------------------*/
+/*----------------------------------------------------------------*/
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// <!-- ====== related products section ====== -- >
+.related_pro {
+  > .container-lg {
+    // swiper js style
+    > .swiper {
+      width: 100%;
+      height: 100%;
+      > .swiper-wrapper {
+        > .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+          // product styles here
+          @include pro();
+        }
+      }
+    }
+
+    // .swiper-slide img {
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover;
+    // }
+  }
 }
