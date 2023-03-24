@@ -104,6 +104,7 @@ body {
         position: absolute;
         top: 2%;
         right: 2%;
+        z-index: 9;
 
         > a {
           border-radius: 50%;
@@ -134,7 +135,7 @@ body {
           display: block;
           text-decoration: none;
           color: var(--white);
-          padding: 16px 0;
+          padding: 0;
           width: 100%;
           text-align: center;
           background-color: var(--transparent-black);
@@ -856,7 +857,15 @@ footer {
 
 // <!-- ====== related products section ====== -- >
 .related_pro {
+  margin-top: 20px;
   > .container-lg {
+    padding: 12px 0;
+    border-top: 1px solid var(--gray);
+    > h5 {
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
     // swiper js style
     > .swiper {
       width: 100%;
@@ -875,13 +884,69 @@ footer {
           @include pro();
         }
       }
-    }
+      // swiper button styles
+      > .swiper-button-next {
+        right: -10%;
+        opacity: 0;
+        visibility: none;
+      }
+      > .swiper-button-prev {
+        left: -10%;
+        opacity: 0;
+        visibility: none;
+      }
+      > .swiper-button-next,
+      > .swiper-button-prev {
+        background-color: var(--white);
+        background-color: rgba(255, 255, 255, 0.671);
+        z-index: 1;
+        color: var(--black) !important;
+        fill: var(--black) !important;
+        stroke: var(--black) !important;
+        height: 100%;
+        top: 0;
+        width: 18px !important;
+        transition: all 0.3s ease-in-out;
+        &::after {
+          font-size: 16px !important;
+          font-weight: 900;
+        }
+      }
 
-    // .swiper-slide img {
-    //   display: block;
-    //   width: 100%;
-    //   height: 100%;
-    //   object-fit: cover;
-    // }
+      // paigination styles here
+      > .swiper-pagination {
+        > .swiper-pagination-bullet {
+          width: 10px;
+          height: 10px;
+          color: var(--black);
+          opacity: 0.2;
+          position: relative;
+          background: var(--black);
+          transition: all 0.3s ease-in-out;
+        }
+        > .swiper-pagination-bullet-active {
+          background-color: var(--black) !important;
+          width: 10px;
+          height: 10px;
+          opacity: 1;
+          transition: all 0.3s ease-in-out;
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+      &:hover {
+        > .swiper-button-next {
+          right: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+        > .swiper-button-prev {
+          left: 0;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
   }
 }

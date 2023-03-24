@@ -36,7 +36,7 @@
             </div>
             <!-- logo -->
             <div class="logo">
-                <a href="#">
+                <a href="./">
                     <img id="mainLogo" src="https://halalfoodservicebd.com/wp-content/uploads/2022/01/Halal-Food-Service-main-823x800.png" alt="" />
                 </a>
             </div>

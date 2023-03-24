@@ -6,13 +6,34 @@ include_once("./include/navbar.php");
 <!-- ====== product details section ====== -->
 <!-- =================================== -->
 <section class="pro_detls">
+    <div class="container-lg">
+        <div class="details">
+            <div class="pro">
+                <div class="img_pro">
+                    <a data-big="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg" href="#" class="z-image">
+                        <img class="img-fluid" src="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg" alt="" />
+                    </a>
+                    <div class="wish_list">
+                        <a href="#"><i class="fa-solid fa-heart"></i></a>
+                    </div>
+                    <div class="quick_view" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <!-- Button trigger Quick View modal -->
+                        <a href="javascript:void(0)"><strong>Quick View</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab_contents">
 
+        </div>
+    </div>
 </section>
 <!-- =================================== -->
 <!-- ====== related products section ====== -->
 <!-- =================================== -->
 <section class="related_pro">
     <div class="container-lg">
+        <h5>Related Products</h5>
         <!-- Swiper -->
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">

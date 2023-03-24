@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <!-- click to  zoom image css -->
-    <link rel="stylesheet" href="./assets/css/jquery.pan.css?<?php time() ?>" />
+    <link rel="stylesheet" href="./assets/css/jquery.pan.css?<?php echo time(); ?>" />
 
     <!-- custom css link -->
-    <link rel="stylesheet" href="./assets/css/style.min.css?<?php time() ?>" />
+    <link rel="stylesheet" href="./assets/css/style.min.css?<?php echo time(); ?>" />
 </head>
 
 <body>
