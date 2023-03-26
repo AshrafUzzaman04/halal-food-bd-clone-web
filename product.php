@@ -5,10 +5,10 @@ include_once("./include/navbar.php");
 <!-- =================================== -->
 <!-- ====== product details section ====== -->
 <!-- =================================== -->
-<section class="pro_detls">
+<section class="pro_detls mt-5">
     <div class="container-lg">
-        <div class="details">
-            <div class="pro">
+        <div class="details row">
+            <div class="pro col-6">
                 <div class="img_pro">
                     <a data-big="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg" href="#" class="z-image">
                         <img class="img-fluid" src="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg" alt="" />
@@ -16,11 +16,13 @@ include_once("./include/navbar.php");
                     <div class="wish_list">
                         <a href="#"><i class="fa-solid fa-heart"></i></a>
                     </div>
-                    <div class="quick_view" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <!-- Button trigger Quick View modal -->
-                        <a href="javascript:void(0)"><strong>Quick View</strong></a>
+                    <div class="zoom_pic">
+                        <a data-big="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg" href="javascript:voild(0)" class="z-image tt" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Zoom"><i class="fa-solid fa-magnifying-glass-plus fa-shake"></i></a>
                     </div>
                 </div>
+            </div>
+            <div class="pro_order col-6">
+                <span>hi</span>
             </div>
         </div>
         <div class="tab_contents">

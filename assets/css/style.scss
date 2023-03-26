@@ -855,6 +855,57 @@ footer {
 /*----------------------product.php page styles-------------------*/
 /*----------------------------------------------------------------*/
 
+// <!-- ====== product details section ====== -->
+.pro_detls {
+  > .container-lg {
+    > .details {
+      @include pro();
+      > .pro {
+        > .img_pro {
+          transition: all 0.3s ease-in-out;
+          > .zoom_pic {
+            position: absolute;
+            bottom: 2%;
+            left: 2%;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            cursor: pointer !important;
+            > a {
+              border-radius: 50%;
+              border: 2px solid var(--gray);
+              display: flex;
+              padding: 7px;
+              transition: all 0.3s ease-in-out;
+              text-decoration: none;
+              > i {
+                color: var(--gray);
+                font-size: 20px;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+            &:hover {
+              > a {
+                border: 2px solid var(--white);
+                background-color: var(--white);
+                > i {
+                  color: var(--black);
+                }
+              }
+            }
+          }
+          &:hover {
+            > .zoom_pic {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // <!-- ====== related products section ====== -- >
 .related_pro {
   margin-top: 20px;
