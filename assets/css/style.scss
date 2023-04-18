@@ -25,6 +25,7 @@
   --scrollbar-thumb: #808080;
   --scrollbar-thumb-hover: #9b9b9b;
   --footer-bg: #1e1e1e;
+  --btn-green: #00c200;
 }
 body {
   background-color: white;
@@ -956,6 +957,125 @@ footer {
           border-bottom: 1px dashed var(--gray);
           width: 50%;
           padding-bottom: 16px;
+        }
+        > .quantity_input {
+          > div {
+            > button {
+              transition: all 0.3s ease-in-out;
+              border-radius: 0;
+              font-weight: bold;
+              padding-top: 6px;
+              padding-bottom: 6px;
+              font-size: 18px;
+              &:hover {
+                background-color: var(--gray);
+              }
+            }
+            > input {
+              border: 1px solid var(--gray);
+              border-left: none;
+              width: 74px;
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+        }
+        > form {
+          > .add_to_cart {
+            background-color: var(--yellow);
+            color: var(--white);
+            border: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 6px 16px;
+            text-transform: uppercase;
+            margin: 0px 10px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              background-color: #e29b00;
+            }
+          }
+        }
+        > .button_buy {
+          background-color: var(--btn-green);
+          color: var(--white);
+          border: none;
+          font-weight: bold;
+          font-size: 18px;
+          padding: 6px 20px;
+          text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: #009c00;
+          }
+        }
+        > .continue_shopping {
+          font-weight: 200;
+          letter-spacing: 0.8px;
+          font-size: 15px;
+        }
+        > hr {
+          margin: 2px 0;
+          width: 50%;
+          color: var(--dark-gray) !important;
+        }
+        > .social_icons {
+          > a {
+            color: var(--dark-gray);
+            border: 2px solid var(--dark-gray);
+            border-radius: 50% !important;
+            transition: all 0.3s ease-in-out;
+          }
+          > :nth-child(1) {
+            &:hover {
+              color: var(--white);
+              background-color: #3b5998;
+              border: 2px solid var(--white);
+            }
+          }
+          > :nth-child(2) {
+            &:hover {
+              color: var(--white);
+              background-color: #55acee;
+              border: 2px solid var(--white);
+            }
+          }
+          > :nth-child(3) {
+            &:hover {
+              color: var(--white);
+              background: radial-gradient(
+                circle at 30% 107%,
+                #fdf497 0%,
+                #fdf497 5%,
+                #fd5949 45%,
+                #d6249f 60%,
+                #285aeb 90%
+              );
+              border: 2px solid var(--white);
+            }
+          }
+          > :nth-child(4) {
+            &:hover {
+              color: var(--white);
+              background-color: #0082ca;
+              border: 2px solid var(--white);
+            }
+          }
+          > :nth-child(5) {
+            &:hover {
+              color: var(--white);
+              background-color: #c61118;
+              border: 2px solid var(--white);
+            }
+          }
+          > :nth-child(6) {
+            &:hover {
+              color: var(--white);
+              background-color: #25d366;
+              border: 2px solid var(--white);
+            }
+          }
         }
       }
     }
