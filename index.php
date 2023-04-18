@@ -45,7 +45,7 @@ include_once("./include/navbar.php");
       ?>
         <div class="pro">
           <div class="img_pro">
-            <a data-big="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg" href="#" class="z-image">
+            <a href="product.php">
               <img class="img-fluid" src="https://halalfoodservicebd.com/wp-content/uploads/2021/12/299106266_601731048168033_8846127039959966928_n.jpg" alt="" />
             </a>
             <div class="wish_list">
@@ -87,7 +87,7 @@ include_once("./include/navbar.php");
 </section>
 
 <!-- =================================== -->
-<!-- ====== top category section ====== -->
+<!-- ====== top category section ======= -->
 <!-- =================================== -->
 <section class="top_category">
   <div class="container-lg">
@@ -160,10 +160,17 @@ include_once("./include/navbar.php");
     </div>
     <!-- grid video content -->
     <div class="grid_video">
-      <!-- video 1 -->
-      <div class="video">
-        <iframe class="img-fluid w-100 h-100" src="https://www.youtube.com/embed/56Rdkrvfx0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
+      <?php
+      for ($i = 0; $i < 3; $i++) {
+      ?>
+        <!-- video 1 -->
+        <div class="video">
+          <iframe class="img-fluid w-100 h-100" src="https://www.youtube.com/embed/56Rdkrvfx0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      <?php
+      }
+      ?>
+
     </div>
   </div>
 </section>

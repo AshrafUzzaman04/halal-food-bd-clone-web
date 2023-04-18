@@ -35,7 +35,7 @@ jQuery.fn.extend({
       }
     });
 
-    finalSet.css("cursor", "zoom-in");
+    finalSet.css("cursor", "pointer");
 
     finalSet.click(function (e) {
       var t = $(this);
