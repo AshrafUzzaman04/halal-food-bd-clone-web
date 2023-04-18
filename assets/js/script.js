@@ -4,16 +4,20 @@ var value;
 
 $(".increase").click(function () {
   value = $("#quantity").val();
-  value++;
 
-  $("#quantity").val(value);
+  if (value < 9999) {
+    value++;
+
+    $("#quantity").val(value);
+  }
 });
 
 $(".decrease").click(function () {
   value = $("#quantity").val();
-  value--;
 
-  if (value > 0) {
+  if (value > 1) {
+    value--;
+
     $("#quantity").val(value);
   }
 });

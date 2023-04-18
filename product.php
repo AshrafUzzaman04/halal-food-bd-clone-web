@@ -108,7 +108,7 @@ include_once("./include/navbar.php");
         </div>
     </div>
 </section>
-<!-- =================================== -->
+<!-- ===================================== -->
 <!-- ====== related products section ====== -->
 <!-- =================================== -->
 <section class="related_pro mx-2 mx-lg-0">
