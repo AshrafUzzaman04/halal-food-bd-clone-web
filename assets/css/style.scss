@@ -872,6 +872,128 @@ footer {
   }
 }
 
+// login modal
+#loginModal {
+  > .modal-dialog {
+    > .modal-content {
+      > .modal-header {
+        border: none;
+        .btn-close:focus {
+          outline: 0;
+          box-shadow: none;
+          opacity: none;
+        }
+      }
+      > .modal-body {
+        > ul {
+          > li {
+            > button {
+              color: var(--black);
+              font-weight: 600;
+              font-size: 20px;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+            }
+            > button.active {
+              color: var(--white);
+              background-color: var(--yellow);
+            }
+          }
+        }
+        > .tab-content {
+          > .tab-pane {
+            > form {
+              > div {
+                width: 100%;
+                > a {
+                  text-decoration: none;
+                  color: var(--black);
+                  transition: all 0.3s ease-in-out;
+                  &:hover {
+                    color: var(--yellow);
+                  }
+                }
+                > span {
+                  font-size: 17px;
+                  color: var(--black);
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                }
+                > .form-check {
+                  width: max-content;
+                  display: inline-block;
+                  margin: 6px;
+                  > input {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:focus {
+                      box-shadow: none;
+                      background-color: var(--yellow);
+                      border-color: var(--yellow);
+                    }
+                    &:checked {
+                      box-shadow: none;
+                      background-color: var(--yellow);
+                      border-color: var(--yellow);
+                    }
+                  }
+                  > label {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                }
+                > label {
+                  > span {
+                    font-size: 17px;
+                    color: var(--black);
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                  }
+                }
+                > input {
+                  width: 100%;
+                  border: 1px solid var(--gray);
+                  padding: 4px 12px;
+                  margin-bottom: 20px;
+                  transition: all 0.3s ease-in-out;
+                  &:focus {
+                    outline: none;
+                    border: 1px solid var(--yellow);
+                  }
+                }
+                > #remember_me {
+                  width: auto;
+                }
+                > .remember {
+                  padding: 0px 5px;
+                }
+                > button {
+                  background-color: var(--yellow);
+                  color: var(--white);
+                  border: none;
+                  font-weight: bold;
+                  font-size: 18px;
+                  padding: 6px 16px;
+                  text-transform: uppercase;
+                  margin: 10px 0;
+                  -webkit-transition: all 0.3s ease-in-out;
+                  transition: all 0.3s ease-in-out;
+                  &:hover {
+                    background-color: #e29b00;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 /*----------------------------------------------------------------*/
 /*----------------------product.php page styles-------------------*/
 /*----------------------------------------------------------------*/

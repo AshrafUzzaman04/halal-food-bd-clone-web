@@ -55,6 +55,111 @@
     <!-- Copyright -->
 </footer>
 
+<!-- login modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4 pt-0">
+                <ul class="nav nav-pills mb-md-4 mb-3 justify-content-center align-items-center" id="start-user" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="sign-in-tab" data-bs-toggle="pill" data-bs-target="#sign-in" type="button" role="tab" aria-controls="sign-in" aria-selected="true">Sign In</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="register-tab" data-bs-toggle="pill" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">Register</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="start-userContent">
+                    <div class="tab-pane fade show active" id="sign-in" role="tabpanel" aria-labelledby="sign-in-tab" tabindex="0">
+                        <form action="">
+                            <div>
+                                <label class="d-block" for="login_email"><span>Email address *</span></label>
+                                <input id="login_email" type="email" name="Uname_email">
+                            </div>
+                            <div>
+                                <label class="d-block" for="login_pass"><span>Password *</span></label>
+                                <input id="login_pass" type="password" name="log_pass">
+                            </div>
+                            <div>
+                                <input id="remember_me" type="checkbox" name="remember_check">
+                                <label class="remember" for="remember_me"><span>Remember me</span></label>
+                            </div>
+                            <div>
+                                <button type="button">LOG IN</button>
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)"><span>Lost your password?</span></a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab" tabindex="0">
+                        <form action="">
+                            <div class="col-12">
+                                <label class="d-block" for="regi_name"><span>Name *</span></label>
+                                <input id="regi_name" type="text" name="reg_name">
+                            </div>
+                            <div>
+                                <label class="d-block" for="regi_mobile"><span>Mobile *</span></label>
+                                <input id="regi_mobile" type="text" name="reg_mobile">
+                            </div>
+                            <div>
+                                <label class="d-block" for="regi_email"><span>Email *</span></label>
+                                <input id="regi_email" type="email" name="reg_email">
+                            </div>
+                            <div>
+                                <label class="d-block" for="regi_pass"><span>Password *</span></label>
+                                <input id="regi_pass" type="password" name="reg_pass">
+                            </div>
+                            <div>
+                                <span>Gender *</span>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Female
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                                    <label class="form-check-label" for="flexRadioDefault3">
+                                        Others
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="my-3">
+                                <button type="button">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Modal title
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">hi</div>
+        </div>
+    </div>
+</div>
+
 
 <!-- jquery cdn -->
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

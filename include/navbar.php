@@ -121,13 +121,13 @@
             <!-- ============================= -->
             <section class="social_media">
                 <div class="fav d-none d-lg-block">
-                    <a href="#"><ion-icon name="heart"></ion-icon></a>
+                    <a href="wishlist.php"><ion-icon name="heart"></ion-icon></a>
                 </div>
                 <div class="user d-none d-lg-block">
-                    <a href="#"><ion-icon name="person"></ion-icon></a>
+                    <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#loginModal"><ion-icon name="person"></ion-icon></a>
                 </div>
                 <div class="cart">
-                    <a href="#"><span class="d-none d-lg-block">৳ 0.00</span><ion-icon name="cart"></ion-icon></a>
+                    <a href="cart.php"><span class="d-none d-lg-block">৳ 0.00</span><ion-icon name="cart"></ion-icon></a>
                 </div>
             </section>
         </div>
