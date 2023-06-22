@@ -1502,3 +1502,48 @@ footer {
     }
   }
 }
+
+/*----------------------------------------------------------------*/
+/*----------------------checkout.php page styles-------------------*/
+/*----------------------------------------------------------------*/
+.checkout-container {
+  > .row {
+    > div {
+      > form {
+        > div {
+          > div {
+            > small {
+              font-family: "Kalpurush", sans-serif;
+            }
+            > input {
+              margin: 10px 0;
+              width: 100%;
+              border: 1px solid var(--gray);
+              padding: 7px 12px;
+              font-size: 16px;
+              font-family: "Kalpurush", sans-serif;
+              &:focus {
+                outline: none;
+                box-shadow: inset 0px 0px 13px -10px rgb(0 0 0);
+              }
+              &::placeholder {
+                font-weight: 600;
+              }
+            }
+            > textarea {
+              min-height: 103px;
+              margin: 16px 0;
+              width: 100%;
+              border: 1px solid var(--gray);
+              padding: 7px 12px;
+              &:focus {
+                outline: none;
+                box-shadow: inset 0px 0px 13px -10px rgb(0 0 0);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -12,24 +12,24 @@ include_once("./include/cartManu.php");
                 <div class="col-12">
                     <div class="col-12">
                         <span class="d-block fw-bold">Full Name *</span>
-                        <input type="text" width="100%" class="col-12">
+                        <input type="text" width="100%" class="col-12" placeholder="আপনার নাম লিখুন">
                     </div>
                     <div class="col-12">
-                        <span class="d-block fw-bold">ফোন নাম্বার লিখুন *</span>
-                        <input type="text" width="100%" class="col-12">
+                        <small class="d-block fw-bold">ফোন নাম্বার লিখুন *</small>
+                        <input type="text" width="100%" maxlength="11" class="col-12" placeholder="ফোন নম্বর লিখুন">
                     </div>
                     <div class="col-12">
                         <span class="d-block fw-bold">Street address *</span>
-                        <input type="text" width="100%" class="col-12">
+                        <input type="text" width="100%" class="col-12" placeholder="আপনার ঠিকানা লিখুন">
                     </div>
                     <div class="col-12">
                         <span class="d-block fw-bold">Town / City *</span>
-                        <input type="text" width="100%" class="col-12">
+                        <input type="text" width="100%" class="col-12" placeholder="থানা ও  লিখুন">
                     </div>
                     <div class="col-12">
                         <h5 class="d-block fw-bold">ADDITIONAL INFORMATION</h5>
                         <small class="fw-bold">Order notes (optional)</small>
-                        <input type="text" width="100%" class="col-12">
+                        <textarea width="100%" class="col-12" placeholder="Notes about your order, e.g. special notes for delivery." spellcheck="false"></textarea>
                     </div>
                 </div>
             </form>
