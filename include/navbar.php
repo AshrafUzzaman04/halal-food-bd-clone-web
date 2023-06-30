@@ -44,7 +44,7 @@
             <div class="list_item" id="mySidepanel">
                 <a href="javascript:void(0)" class="closebtn d-block d-lg-none" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
                 <ul id="ul">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="./">Home</a></li>
                     <li>
                         <a class="dropdown" href="javascript:void(0)">All Foods <span><i class="bx bx-chevron-down"></i></span></a>
                         <ul class="dropdown-child">

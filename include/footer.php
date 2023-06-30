@@ -49,7 +49,7 @@
 
     <!-- Copyright -->
     <div class="text-center copyright">
-        2023 © Halal Food Service | Developed By
+        <?= date("Y") ?> © Halal Food Service | Developed By
         <a class="text-reset fw-bold" href="https://github.com/ashrafuzzaman04">Ashraf Uzzaman</a>
     </div>
     <!-- Copyright -->

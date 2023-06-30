@@ -61,7 +61,6 @@ include_once("./include/cartManu.php");
                         <tr class="border-1 border-bottom">
                             <td class="py-2">
                                 <span class="text-secondary">Shipping</span>
-
                                 <div class="form-check my-2">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                                     <label class="form-check-label fw-semibold" style='font-family: "Kalpurush", sans-serif;' for="flexRadioDefault2">

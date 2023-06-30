@@ -1510,6 +1510,30 @@ footer {
   > .row {
     > div {
       > form {
+        > table {
+          > tbody {
+            > tr {
+              > td {
+                > small {
+                  font-family: "Kalpurush", sans-serif;
+                }
+                > button {
+                  margin: 5px 0;
+                  width: max-content;
+                  border: none;
+                  background-color: var(--yellow);
+                  color: var(--white);
+                  padding: 6px 20px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  &:hover {
+                    background-color: #e29b00;
+                  }
+                }
+              }
+            }
+          }
+        }
         > div {
           > div {
             > small {
